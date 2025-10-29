@@ -6,7 +6,7 @@ jobs:
     steps:
       - run: pip install scipy pint open_atmos_jupyter_utils matplotlib numpy
       - uses: actions/checkout@v4
-      - run: sudo app-get install texlive-xetex inkscape pandoc
+      - run: sudo apt-get install texlive-xetex inkscape pandoc
       - run: pip install nbconvert
       - run: python -m nbconvert --to pdf --execute Test.ipynb
       - uses: actions/upload-artifact@v4
